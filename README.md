@@ -1,2 +1,2 @@
 # faithevu.github.io
-These have files for my  CIS 300 course.
+This is my website project for my CIS 300 class.
