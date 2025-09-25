@@ -1,0 +1,279 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --text: #040f00;
+    --background: #f5fff6;
+    --primary: #a9ff7a;
+    --secondary: #99ffe0;
+    --accent: #70eaff;
+    --link: #007bac;
+}
+
+#wrapper {
+    background-color: #fff;
+    border: 1px solid var(--text);
+    box-shadow: 5px 5px var(--text);
+    height: auto;
+}
+
+body {
+    background-color: var(--accent);
+    background-image: linear-gradient(to bottom, var(--accent), var(--primary));
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: var(--primary);
+    color: var(--text);
+    text-align: center;
+    border-bottom: 1px solid var(--text);
+}
+
+header a {
+    color: var(--text);
+    text-decoration: none;
+}
+
+header a:link {
+    color: #FFFFFF;
+}
+
+header a:hover {
+    color: var(--link);
+}
+
+nav {
+    background-color: #fff;
+    font-weight: bold;
+    font-size: 1.2;
+    padding: 0;
+    text-align: center;
+    border-right: 1px solid var(--text);
+}
+
+nav li {
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0;
+    font-size: 1.2em;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 6px;
+}
+
+nav a:link {
+    color: var(--link);
+}
+
+nav a:visited {
+    color: var(--link);
+}
+
+nav a:hover {
+    background-color: var(--accent);
+    color: #fff;
+}
+
+main {
+    background-color: #FFFFFF;
+    padding: 30px 20px 20px 30px;
+    display: block;
+    overflow: auto;
+    text-align: center;
+}
+
+main a {
+    text-decoration: none;
+}
+
+main a:link {
+    color: var(--link);
+}
+
+main a:visited {
+    color: var(--link);
+}
+
+main a:hover {
+    color: var(--link);
+    font-weight: bolder;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+
+#h2 {
+    background-color: var(--secondary);
+    color: var(--text);
+    text-align: center;
+    padding: 30px;
+    border-top: 1px solid var(--text);
+    border-bottom: 1px solid var(--text);
+}
+
+
+footer {
+    font-size: .85em;
+    font-style: italic;
+    text-align: center;
+    font-family: Georgia, "Times New Roman", serif;
+    padding: 2em;
+    background-color: #FFFFFF;
+}
+
+#homehero {
+    background-image: url(logo_char.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 656px 238px;
+    margin: auto auto;
+    width: 656px;
+    height: 238px;
+}
+
+#bbhero {
+    background-image: url(bb.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto;
+    width: 196px;
+    height: 223px;
+    background-size: 90% 90%;
+}
+
+#brochero {
+    background-image: url(broc.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto;
+    width: 194px;
+    height: 235px;
+    background-size: 90% 90%;
+}
+
+#sammyhero {
+    background-image: url(sammy.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto;
+    width: 190px;
+    height: 231px;
+    background-size: 80% 80%;
+}
+
+#cookiehero {
+    background-image: url(cookie.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto;
+    width: 202px;
+    height: 233px;
+    background-size: 80% 80%;
+}
+
+
+@media (min-width: 600px) {
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+
+    nav li {
+        border-bottom: none;
+    }
+
+    section {
+        margin-left: 2em;
+        margin-right: 2em;
+    }
+
+    section {
+        flex: 1;
+    }
+
+    .flow {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 1024px) {
+    #wrapper {
+        margin: auto;
+        width: 80%;
+        border: 1px solid var(--text);
+        box-shadow: 5px 5px var(--text);
+    }
+
+    nav {
+        text-align: left;
+        padding-left: 1em;
+    }
+
+    @supports (display: grid) {
+        nav ul {
+            flex-direction: column;
+            padding-top: 1em;
+        }
+
+        header {
+            grid-area: header;
+        }
+
+        nav {
+            grid-area: nav;
+        }
+
+        main {
+            grid-area: main;
+        }
+
+        h2 {
+            grid-area: h2;
+        }
+
+        footer {
+            grid-area: footer;
+        }
+
+        .hero {
+            grid-area: hero;
+        }
+
+        #wrapper {
+            display: grid;
+            grid-template:
+                "header header" auto
+                "nav hero" 300px 
+                "nav h2"
+                "nav main"
+                "nav footer"
+                / 250px 1fr;
+        }
+
+        #wrapper.nohero {
+            display: grid;
+            grid-template:
+                "header header" auto
+                "nav main"
+                "nav footer"
+                / 180px 1fr;
+        }
+    }
+}
