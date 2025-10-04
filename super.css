@@ -13,9 +13,10 @@
 
 #wrapper {
     background-color: #fff;
-    border: 1px solid var(--text);
     box-shadow: 5px 5px var(--text);
+    border-radius: 20px;
     height: auto;
+    width: auto;
 }
 
 body {
@@ -23,22 +24,25 @@ body {
     background-image: linear-gradient(to bottom, var(--accent), var(--primary));
     color: var(--text);
     font-family: Arial, Helvetica, sans-serif;
+    border-radius: 20px;
 }
 
 header {
     background-color: var(--primary);
-    color: var(--text);
+    color: #fff;
+    text-shadow: 1px 2px 2px var(--text);
     text-align: center;
     border-bottom: 1px solid var(--text);
+    border-radius: 20px 20px 0px 0px;
 }
 
 header a {
-    color: var(--text);
+    color: #fff;
     text-decoration: none;
 }
 
 header a:link {
-    color: #FFFFFF;
+    color: #FFF;
 }
 
 header a:hover {
@@ -52,10 +56,11 @@ nav {
     padding: 0;
     text-align: center;
     border-right: 1px solid var(--text);
+    border-radius: 0px 0px 0px 20px;
 }
 
 nav li {
-    padding: 10px;
+    padding: 10px 20px 10px 10px;
 }
 
 nav ul {
@@ -66,8 +71,9 @@ nav ul {
 }
 
 nav a {
+    display: block;
     text-decoration: none;
-    padding: 6px;
+    padding: 5px;
 }
 
 nav a:link {
@@ -85,10 +91,13 @@ nav a:hover {
 
 main {
     background-color: #FFFFFF;
-    padding: 30px 20px 20px 30px;
+    padding: 50px 20px 50px 20px;
     display: block;
     overflow: auto;
     text-align: center;
+    line-height: 120%;
+    border-radius: 0px 0px 20px 0px;
+    align-items: center;
 }
 
 main a {
@@ -105,7 +114,7 @@ main a:visited {
 
 main a:hover {
     color: var(--link);
-    font-weight: bolder;
+    background-color: var(--secondary);
 }
 
 h1 {
@@ -117,6 +126,7 @@ h1 {
 }
 
 #h2 {
+    width: auto;
     background-color: var(--secondary);
     color: var(--text);
     text-align: center;
@@ -125,6 +135,32 @@ h1 {
     border-bottom: 1px solid var(--text);
 }
 
+h3 {
+    width: auto;
+    background-color: var(--accent);
+    border-radius: 15px;
+    color: var(--text);
+    text-align: center;
+    padding: 30px;
+}
+
+
+section {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+section {
+    flex: 1;
+}
+
+.flow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 20px 20px 20px 100px;
+    width: 1000px;
+}
 
 footer {
     font-size: .85em;
@@ -133,6 +169,7 @@ footer {
     font-family: Georgia, "Times New Roman", serif;
     padding: 2em;
     background-color: #FFFFFF;
+    border-radius: 0px 0px 20px 0px;
 }
 
 #homehero {
@@ -143,6 +180,17 @@ footer {
     margin: auto auto;
     width: 656px;
     height: 238px;
+}
+
+#fruitshero {
+    background-image: url(logo_fruits.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 630px 283px;
+    margin: auto auto;
+    width: 630px;
+    height: 283px;
+
 }
 
 #bbhero {
@@ -159,7 +207,7 @@ footer {
     background-image: url(broc.png);
     background-repeat: no-repeat;
     background-position: center;
-    margin: 0 auto;
+    margin: auto auto;
     width: 194px;
     height: 235px;
     background-size: 90% 90%;
@@ -185,6 +233,134 @@ footer {
     background-size: 80% 80%;
 }
 
+#bbfruits {
+    background-image: url(bb_fruits.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto;
+    width: 202px;
+    height: 233px;
+    background-size: 100% 100%;
+}
+
+#sweetie {
+    background-image: url(sweetie.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto;
+    width: 223px;
+    height: 290px;
+    background-size: 100% 100%;
+}
+
+#ruby {
+    background-image: url(ruby.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto;
+    width: 219px;
+    height: 292px;
+    background-size: 100% 100%;
+}
+
+#brocveges {
+    background-image: url(broc.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: auto auto;
+    width: 194px;
+    height: 235px;
+    background-size: 100% 100%;
+}
+
+#kyle {
+    background-image: url(kyle.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: auto auto;
+    width: 225px;
+    height: 300px;
+    background-size: 90% 90%;
+}
+
+#chic {
+    background-image: url(chic.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: auto auto;
+    width: 218px;
+    height: 291px;
+    background-size: 100% 100%;
+}
+
+#sammyprotein {
+    background-image: url(sammy.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto;
+    width: 190px;
+    height: 231px;
+    background-size: 100% 100%;
+}
+
+#eddie {
+    background-image: url(eddie.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto;
+    width: 213px;
+    height: 297px;
+    background-size: 100% 100%;
+}
+
+#cookiefoes {
+    background-image: url(cookie.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto;
+    width: 202px;
+    height: 233px;
+    background-size: 90% 90%;
+}
+
+#candy {
+    background-image: url(candy.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto;
+    width: 222px;
+    height: 298px;
+    background-size: 90% 90%;
+}
+
+
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 5px solid var(--accent);
+    border-radius: 12px;
+    margin: 0 auto;
+}
+
+th {
+    background-color: var(--accent);
+    background-image: linear-gradient(to bottom, var(--accent), var(--secondary));
+}
+
+td,
+th {
+    padding: 0.8em;
+    font-size: 1.2em;
+}
+
+td {
+    text-align: center;
+}
+
+tr:nth-of-type(even) {
+    background-color: #f5f5f5;
+}
+
 
 @media (min-width: 600px) {
     nav ul {
@@ -199,15 +375,14 @@ footer {
     }
 
     section {
-        margin-left: 2em;
-        margin-right: 2em;
-    }
-
-    section {
         flex: 1;
     }
 
-    .flow {
+    main {
+        border-radius: 0px 0px 20px 20px;
+    }
+
+    .flow_front {
         display: flex;
         flex-direction: row;
     }
@@ -217,7 +392,7 @@ footer {
     #wrapper {
         margin: auto;
         width: 80%;
-        border: 1px solid var(--text);
+        border: 0px solid var(--text);
         box-shadow: 5px 5px var(--text);
     }
 
@@ -259,9 +434,8 @@ footer {
         #wrapper {
             display: grid;
             grid-template:
-                "header header" auto
-                "nav hero" 300px 
-                "nav h2"
+                "header header"
+                "nav hero" 300px "nav h2"
                 "nav main"
                 "nav footer"
                 / 250px 1fr;
