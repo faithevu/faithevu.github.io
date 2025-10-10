@@ -13,7 +13,7 @@
 
 #wrapper {
     background-color: #fff;
-    box-shadow: 5px 5px var(--text);
+    box-shadow: 7px 7px var(--text);
     border-radius: 20px;
     height: auto;
     width: auto;
@@ -27,22 +27,26 @@ body {
     border-radius: 20px;
 }
 
+p {
+    line-height: 150%;
+}
+
 header {
     background-color: var(--primary);
-    color: #fff;
-    text-shadow: 1px 2px 2px var(--text);
+    color: var(--text);
+    text-shadow: 1px 2px 2px var(--accent);
     text-align: center;
     border-bottom: 1px solid var(--text);
     border-radius: 20px 20px 0px 0px;
 }
 
 header a {
-    color: #fff;
+    color: var(--text);
     text-decoration: none;
 }
 
 header a:link {
-    color: #FFF;
+    color: var(--text);
 }
 
 header a:hover {
@@ -64,6 +68,8 @@ nav li {
 }
 
 nav ul {
+    position: sticky;
+    top: 0;
     list-style-type: none;
     margin: 0;
     padding-left: 0;
@@ -95,26 +101,26 @@ main {
     display: block;
     overflow: auto;
     text-align: center;
-    line-height: 120%;
     border-radius: 0px 0px 20px 0px;
     align-items: center;
 }
 
 main a {
-    text-decoration: none;
+    background-color: var(--secondary);
 }
 
 main a:link {
-    color: var(--link);
+    color: var(--text);
 }
 
 main a:visited {
-    color: var(--link);
+    color: var(--text);
 }
 
 main a:hover {
     color: var(--link);
-    background-color: var(--secondary);
+    
+    font-style: italic;
 }
 
 h1 {
@@ -158,10 +164,18 @@ section {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin: 20px 20px 20px 100px;
+    margin: 20px 20px 20px 70px;
     width: 1000px;
 }
 
+.flow_recipes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 auto;
+    text-align: left;
+    line-height: 200%;
+}
 
 footer {
     font-size: .85em;
@@ -191,7 +205,36 @@ footer {
     margin: auto auto;
     width: 630px;
     height: 283px;
+}
 
+#vegeshero {
+    background-image: url(logo_veges.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 700px 250px;
+    margin: auto auto;
+    width: 700px;
+    height: 250px;
+}
+
+#proteinshero {
+    background-image: url(logo_proteins.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 690px 258px;
+    margin: auto auto;
+    width: 690px;
+    height: 258px;
+}
+
+#foeshero {
+    background-image: url(logo_foodfoes.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 400px 300px;
+    margin: auto auto;
+    width: 400px;
+    height: 300px;
 }
 
 #bbhero {
@@ -230,7 +273,7 @@ footer {
     background-position: center;
     margin: 0 auto;
     width: 202px;
-    height: 233px;
+    height: 235px;
     background-size: 80% 80%;
 }
 
@@ -305,11 +348,11 @@ footer {
 }
 
 #eddie {
-    background-image: url(eddie.jpg);
+    background-image: url(eddie.png);
     background-repeat: no-repeat;
     background-position: center;
     margin: 0 auto;
-    width: 213px;
+    width: 198px;
     height: 297px;
     background-size: 100% 100%;
 }
@@ -320,18 +363,18 @@ footer {
     background-position: center;
     margin: 0 auto;
     width: 202px;
-    height: 233px;
-    background-size: 90% 90%;
+    height: 235px;
+    background-size: 100% 100%;
 }
 
 #candy {
-    background-image: url(candy.jpg);
+    background-image: url(candy.png);
     background-repeat: no-repeat;
     background-position: center;
     margin: 0 auto;
-    width: 222px;
+    width: 196px;
     height: 298px;
-    background-size: 90% 90%;
+    background-size: 100% 100%;
 }
 
 
@@ -340,7 +383,7 @@ table {
     border-spacing: 0;
     border: 5px solid var(--accent);
     border-radius: 12px;
-    margin: 0 auto;
+    margin: 70px auto;
 }
 
 th {
@@ -360,6 +403,25 @@ td {
 
 tr:nth-of-type(even) {
     background-color: #f5f5f5;
+}
+
+form {
+    width: 60%;
+    max-width: 35em;
+    display: grid;
+    gap: 1em;
+    margin: 70px auto 20px auto;
+    grid-template-columns: 6em 1fr;
+    text-align: right;
+}
+
+input, textarea {
+    box-shadow: 5px 5px var(--primary);
+}
+
+input[type="submit"] {
+    grid-column: 2/3;
+    width: 9em;
 }
 
 
